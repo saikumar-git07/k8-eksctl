@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
   name: expense
   region: us-east-1
-availabilityZones: [ "us-east-1a" ]
+# availabilityZones: [ "us-east-1a" ]
 managedNodeGroups:
 - name: expense
   instanceType: m7i-flex.large
