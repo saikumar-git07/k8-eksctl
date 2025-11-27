@@ -17,5 +17,10 @@ VALIDATE $? "kubectl installation"
 # VALIDATE $? "kubens installation"
 
 
-# Volume driver
+# Volume EBS driver
 kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.53"
+
+
+# Volume EBS driver
+kubectl kustomize \
+    "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-2.X" > public-ecr-driver.yaml
